@@ -18,7 +18,7 @@ if (strategy.equals("fast")) {
   // 默认
 }
 ```
-## 使用switch ， 优化演示案例
+## 1、使用switch ， 优化演示案例
 ```java
 switch(strategy){
     case "fast" :
@@ -41,7 +41,7 @@ switch(strategy){
 ### 缺点
 * 1、switch在判断区间值或者多个值的时候要一个个列举出来 , 不是特别方便
 * 2、以上的写法仅限在1.8以上版本JDK , 1.8以下版本仅限long、int、char类型
-## 使用多态 + Optional ， 优化演示案例
+## 2、使用多态 + Optional ， 优化演示案例
 ```java
  interface Strategy {
     void doSomething() throws Exception;
@@ -89,7 +89,7 @@ class showDoSomething{
 * 1、Optional必须是JDK1.8以上才可以使用的 , 1.8以下版本只能自己写非空判断进行默认值的处理
 * 2、除了默认方法 , 其余方法一定要实现一个接口类 ,并且将所有的接口类放入map中
 * 3、多条件的情况下 , 要在map中存入同一对象
-## 使用枚举 , 优化演示案例
+## 3、使用枚举 , 优化演示案例
 ```java
 public enum Strategy{
     FAST{
